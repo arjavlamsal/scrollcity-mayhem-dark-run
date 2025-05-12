@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-/* Base styles */
 body {
   margin: 0;
   overflow: hidden;
   font-family: "Anton", sans-serif;
 }
 
-/* Game container */
 #gameContainer {
   position: relative;
   width: 100%;
@@ -21,7 +19,6 @@ body {
   background-position: center center;
 }
 
-/* Left wall */
 #left-wall {
   position: absolute;
   width: 2000px;
@@ -44,14 +41,12 @@ body {
   margin-left: 200px;
 }
 
-/* Tree styling */
 .tree {
   position: absolute;
   z-index: 0;
   bottom: 0;
 }
 
-/* Sign styling */
 .sign {
   position: absolute;
   z-index: 0;
@@ -60,7 +55,6 @@ body {
   left: 500px;
 }
 
-/* Hero styling */
 #hero {
   position: fixed;
   width: 32px;
@@ -153,7 +147,6 @@ body {
   }
 }
 
-/* Screen styles */
 .screen {
   position: fixed;
   left: 0;
@@ -240,13 +233,11 @@ body {
   margin-left: -80px;
 }
 
-/* Obstacle styling */
 .obstacle {
   position: absolute;
   z-index: 2;
 }
 
-/* Hammer styling */
 .hammer {
   background-color: red;
   width: 100px;
@@ -262,7 +253,6 @@ body {
   50% { bottom: calc(50% - 210px); }
 }
 
-/* Saw styling */
 .saw {
   height: 200px;
   width: 200px;
@@ -288,7 +278,6 @@ body {
   50% { top: calc(50% + 100px); transform: rotate(360deg); }
 }
 
-/* Bush styling */
 .bush, .monster {
   position: absolute;
   z-index: 0;
@@ -320,7 +309,6 @@ body {
   transition: filter 1s;
 }
 
-/* Bird styling */
 .bird {
   position: absolute;
   width: 50px;
@@ -398,7 +386,6 @@ body {
   100% { transform: translateX(-5000px) translateY(-70px); }
 }
 
-/* Finish line and floor styling */
 #finishLine {
   position: absolute;
   width: 200px;
@@ -438,7 +425,6 @@ body {
   pointer-events: none; /* Allow clicking through */
 }
 
-/* House styling */
 .house {
   position: absolute;
   height: 200px;
@@ -495,8 +481,8 @@ body {
   left: 10px;
   font-size: 24px;
   color: #fff;
-  z-index: 9998; /* High z-index to ensure visibility */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Add shadow for better visibility */
+  z-index: 9998;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 #scores p, .scores p {
@@ -545,42 +531,6 @@ body {
 }
 
 /* Media queries */
-/* Jump button styles */
-.jump-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 80px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid #fff;
-  border-radius: 50%;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  z-index: 9999;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.jump-button:active {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: scale(0.95);
-}
-
 @media only screen and (max-width: 600px) {
   .screen h1 {
     font-size: 2.2rem;
@@ -598,12 +548,5 @@ body {
     padding: 12px 24px;
     min-width: 150px;
   }
-  
-  .jump-button {
-    bottom: 30px;
-    right: 30px;
-    width: 100px;
-    height: 100px;
-    font-size: 22px;
-  }
+
 }
