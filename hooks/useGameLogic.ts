@@ -23,7 +23,7 @@ export interface Positions {
 
 export default function useGameLogic() {
   const [status, setStatus] = useState<GameStatus>('start');
-  const [heroClass, setHeroClass] = useState('idle-right');
+  const [heroClass, setHeroClass] = useState('idle-left');
   const [time, setTime] = useState('00:00');
   const [best, setBest] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -40,11 +40,11 @@ export default function useGameLogic() {
     hammers: [1500, 1600, 1700, 4000, 4100, 4200, 4300, 4400, 7700],
     saws: [2600, 5500],
     trees: [
-      { src: 'https://drive.google.com/thumbnail?id=1SSZ8Gl9nSo96RhvWDNlxsaYSWUFQu6h4&sz=w1000', left: 800 },
-      { src: 'https://drive.google.com/thumbnail?id=1LItLexgTPQ9Fno_TgPMJIZb0StcqxgD6&sz=w1000', left: 2000 },
-      { src: 'https://drive.google.com/thumbnail?id=1iQRUmpRWMGjesukrLxJXxQvkAehk_k8P&sz=w1000', left: 3000 },
-      { src: 'https://drive.google.com/thumbnail?id=1o-QjWIBLe95xX303qKG6zE1NitfCrgUT&sz=w2000', left: 5000 },
-      { src: 'https://drive.google.com/thumbnail?id=1o-QjWIBLe95xX303qKG6zE1NitfCrgUT&sz=w2000', left: 6000 }
+      { src: '/images/tree3.png', left: 800 },
+      { src: '/images/tree2.png', left: 2000 },
+      { src: '/images/tree1.png', left: 3000 },
+      { src: '/images/tree4.png', left: 5000 },
+      { src: '/images/tree4.png', left: 6000 }
     ],
     bushPositions: [3500, 5200, 6000, 6500, 6800],
     bushToggleTimes: [
