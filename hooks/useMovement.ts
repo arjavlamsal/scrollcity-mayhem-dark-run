@@ -67,7 +67,7 @@ export function useMovement(onMove: (dir: number) => void, onIdle: () => void, o
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [handleScroll, onJump]);
+  }, [handleScroll, onJump, onIdle]);
 
   return { handleScroll };
 }
