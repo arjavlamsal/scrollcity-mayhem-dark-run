@@ -17,14 +17,12 @@ import Image from 'next/image';
 
 export default function HomePage() {
   const {
-    gameStatus,
     heroState,
     time,
     bestTime,
     onStart,
     onRestart,
     positions,
-    onJump
   } = useGameLogic();
 
   return (
