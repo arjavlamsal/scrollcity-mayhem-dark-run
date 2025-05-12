@@ -1,7 +1,7 @@
 type BirdPos = { left: number; top: string };
 
-interface BirdsProps { positions: BirdPos[]; }
-export default function Birds({ positions }: BirdsProps) {
+interface BirdsProps { positions?: BirdPos[]; }
+export default function Birds({ positions = [] }: BirdsProps) {
   return (
     <>
       {positions.map((pos, i) => (

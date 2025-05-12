@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
 interface BushesProps {
-  positions: number[];
-  toggleTimes: [number, number][];
+  positions?: number[];
+  toggleTimes?: [number, number][];
 }
-export default function Bushes({ positions, toggleTimes }: BushesProps) {
+export default function Bushes({ positions = [], toggleTimes = [] }: BushesProps) {
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLDivElement>('.bush.silhouette');
     const timeouts: NodeJS.Timeout[] = [];

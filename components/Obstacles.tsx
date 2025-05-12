@@ -1,8 +1,8 @@
 type ObstaclesProps = {
-  hammers: number[];
-  saws: number[];
+  hammers?: number[];
+  saws?: number[];
 };
-export default function Obstacles({ hammers, saws }: ObstaclesProps) {
+export default function Obstacles({ hammers = [], saws = [] }: ObstaclesProps) {
   return (
     <>
       {hammers.map((left, i) => (
