@@ -1,3 +1,4 @@
+
 type HouseProps = { left: number; };
 
 export default function House({ left }: HouseProps) {
