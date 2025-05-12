@@ -1,0 +1,151 @@
+/* Hero character animations */
+#hero {
+  background-repeat: no-repeat;
+}
+
+#hero.idle-right {
+  background-image: url("https://drive.google.com/thumbnail?id=1LfRNG8pJK8F0lYtXH9tfGT70l4IW-66S&sz=w1000");
+  background-position: 0 0;
+}
+
+#hero.idle-left {
+  background-image: url("https://drive.google.com/thumbnail?id=1oxPBLaiwJR1QzOrLC4Z_dt5nFl56RzoN&sz=w1000");
+  background-position: 0 0;
+}
+
+#hero.running-right {
+  background-image: url("https://drive.google.com/thumbnail?id=1tbtI6RBfVzPV8TbA-Ww44E5Dz5_Ek3m0&sz=w1000");
+  animation: runRight 0.7s steps(6) infinite;
+}
+
+@keyframes runRight {
+  from { background-position: 0 0; }
+  to { background-position: -192px 0; }
+}
+
+#hero.running-left {
+  background-image: url("https://drive.google.com/thumbnail?id=1eIBkrLk1cMlnsLETX1sLeqOc0On0D2R2&sz=w1000");
+  animation: runLeft 0.7s steps(6) infinite;
+}
+
+@keyframes runLeft {
+  from { background-position: 0 0; }
+  to { background-position: -192px 0; }
+}
+
+#hero.jump {
+  animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0% { top: 70%; }
+  50% { top: 50%; }
+  100% { top: 70%; }
+}
+
+#hero.jump {
+  animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0% { top: 70%; }
+  50% { top: 50%; }
+  100% { top: 70%; }
+}
+
+/* Spider animations */
+.spider {
+  position: absolute;
+  width: 105px;
+  height: 50px;
+  top: calc(50% + 175px);
+  transform: translate(-50%, -50%);
+  transition: top 0.2s;
+  margin-top: -20px;
+  z-index: 99;
+  background-position: 0 0;
+  background-image: url("https://drive.google.com/thumbnail?id=1VTozcNB0JwK3K8PpFjzCkxOCwzOfDEU7&sz=w1000");
+  background-size: 840px 50px; /* Complete sprite */
+  animation: spider 0.3s steps(8) infinite;
+}
+
+@keyframes spider {
+  from { background-position: 0 0; }
+  to { background-position: -840px 0; }
+}
+
+/* Silhouette effect */
+#hero.invert {
+  filter: invert(100%) brightness(20%);
+  transition: filter 1s;
+}
+
+/* Hammer design */
+.hammer {
+  background-color: red;
+  width: 100px;
+  height: 100%;
+  bottom: 0;
+  background: url("https://drive.google.com/thumbnail?id=1oaSfaQ9lH9kJ74WGJZOQzBFnBZL6JWXP&sz=w100") repeat-y;
+  z-index: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% { bottom: calc(50% + 300px); }
+  50% { bottom: calc(50% - 210px); }
+}
+
+/* Saw design */
+.saw {
+  height: 200px;
+  width: 200px;
+  background-color: #bbb;
+  border-radius: 50%;
+  top: calc(50% + 300px);
+  background: url("https://drive.google.com/thumbnail?id=1Ilr8beBalsgBA-QcCSeBpisfhJwj5kUi&sz=w1000");
+  background-size: cover;
+  z-index: 0;
+}
+
+@keyframes saw {
+  0%, 100% {
+    top: calc(50% + 300px);
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(50% + 100px);
+    transform: rotate(360deg);
+  }
+}
+
+.saw:nth-child(1) {
+  animation: saw 5s ease-in-out infinite;
+}
+
+.saw:nth-child(2) {
+  animation: saw 6s ease-in-out infinite;
+  filter: invert(100%) brightness(10%);
+}
+
+/* Bush/monster transition */
+.bush, .monster {
+  position: absolute;
+  z-index: 0;
+  width: 200px;
+  height: 100%;
+  top: calc(50% + 140px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: margin-top 1s;
+}
+
+.bush {
+  background: url("https://drive.google.com/thumbnail?id=1ECNZf1tZIfmNy_GZB0jghoDIDlTMl1Pf&sz=w1000");
+  background-position: top center;
+  margin-top: -20px;
+}
+
+.monster {
+  background: url("https://drive.google.com/thumbnail?id=1UO-UFCQlbSN46NPyDLS8Bf6-WMfbz8lS&sz=w1000");
+  margin-top: -120px;
+}
