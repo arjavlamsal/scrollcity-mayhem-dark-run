@@ -25,7 +25,7 @@ export default function useGameLogic() {
   const [status, setStatus] = useState<GameStatus>('start');
   const [heroClass, setHeroClass] = useState('idle-left');
   const [time, setTime] = useState('00:00');
-  const [lives, setLives] = useState(5);
+  const [lives, setLives] = useState(7);
   const [isHurt, setIsHurt] = useState(false);
   const [best, setBest] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -165,7 +165,7 @@ export default function useGameLogic() {
   
   const onRestart = useCallback(() => {
     // Reset lives and reload the window for a complete restart
-    setLives(5);
+    setLives(7);
     window.location.reload();
   }, []);
 
