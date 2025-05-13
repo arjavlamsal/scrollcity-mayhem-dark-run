@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Lives({ lives }: { lives: number }) {
-  const maxLives = 3;
+  const maxLives = 5;
   const fullHearts = Array(lives).fill(0);
   const emptyHearts = Array(maxLives - lives).fill(0);
 
