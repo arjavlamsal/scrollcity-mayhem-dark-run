@@ -14,16 +14,16 @@ export default {
 
       /* Images & gradients  */
       backgroundImage: {
-        'sky-photo'     : 'url("https://drive.google.com/thumbnail?id=1_wfqi7bSM_iKIMx1sLNrS6aSx259sGrx&sz=w2000")',
-        'left-wall-top' : 'url("https://drive.google.com/thumbnail?id=1o-QjWIBLe95xX303qKG6zE1NitfCrgUT&sz=w2000")',
-        'spider-sprite' : 'url("https://drive.google.com/thumbnail?id=1VTozcNB0JwK3K8PpFjzCkxOCwzOfDEU7&sz=w1000")',
-        'hero-idle-r'   : 'url("https://drive.google.com/thumbnail?id=1LfRNG8pJK8F0lYtXH9tfGT70l4IW-66S&sz=w1000")',
-        'hero-idle-l'   : 'url("https://drive.google.com/thumbnail?id=1oxPBLaiwJR1QzOrLC4Z_dt5nFl56RzoN&sz=w1000")',
-        'hero-run-r'    : 'url("https://drive.google.com/thumbnail?id=1tbtI6RBfVzPV8TbA-Ww44E5Dz5_Ek3m0&sz=w1000")',
-        'hero-run-l'    : 'url("https://drive.google.com/thumbnail?id=1eIBkrLk1cMlnsLETX1sLeqOc0On0D2R2&sz=w1000")',
-        'hammer-tex'    : 'url("https://drive.google.com/thumbnail?id=1oaSfaQ9lH9kJ74WGJZOQzBFnBZL6JWXP&sz=w100")',
-        /* add more as required */
+        'sky-photo'     : 'url("/images/forest_bg.png")',
+        'left-wall-top' : 'url("/images/tree4.png")',
+        'spider-sprite' : 'url("/images/spider.png")',
+        'hero-idle-r'   : 'url("/images/sprite-back.png")',
+        'hero-idle-l'   : 'url("/images/sprite-front.png")',
+        'hero-run-r'    : 'url("/images/running-back.png")',
+        'hero-run-l'    : 'url("/images/running-front.png")',
+        'hammer-tex'    : 'url("/images/hammer.png")',
       },
+      /* add more as required */
 
       /* Keyframes */
       keyframes: {
@@ -109,8 +109,8 @@ export default {
         lights        : 'lights 3s infinite',
         smoke         : 'smoke 3s infinite',
         scroll        : 'scroll 1s infinite',
-      },
-    },
+      }
+    }
   },
   plugins: [],
 }

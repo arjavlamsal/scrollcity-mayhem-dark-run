@@ -38,7 +38,7 @@ export default function HomePage() {
         <Hero state={heroState} />
         <div className="object sign" style={{ position: 'absolute', zIndex: 0 }}>
           <Image
-            src="https://drive.google.com/thumbnail?id=16xQ76yQgLy6N1Z0ERHa8I4Wluq2OGreF&sz=w1000"
+            src="/images/sign.png"
             alt="Sign"
             width={100}
             height={100}

@@ -13,7 +13,7 @@ body {
   overflow: hidden;
   /* gradient fallback if the image fails */
   background: linear-gradient(to bottom, #87ceeb, #ffffff);
-  background-image: url("https://drive.google.com/thumbnail?id=1_wfqi7bSM_iKIMx1sLNrS6aSx259sGrx&sz=w2000");
+  background-image: url("/images/forest_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -35,7 +35,7 @@ body {
   left: 0;
   width: 100%;
   height: 400px;
-  background: url("https://drive.google.com/thumbnail?id=1o-QjWIBLe95xX303qKG6zE1NitfCrgUT&sz=w2000") no-repeat;
+  background: url("/images/tree4.png") no-repeat;
   background-size: cover;
   background-position: bottom right;
   margin-left: 200px;
@@ -79,7 +79,7 @@ body {
   margin-top: -20px;
   z-index: 99;
   background-position: 0 0;
-  background-image: url("https://drive.google.com/thumbnail?id=1VTozcNB0JwK3K8PpFjzCkxOCwzOfDEU7&sz=w1000");
+  background-image: url("/images/spider.png");
   background-size: 840px 50px;
   animation: spider 0.3s steps(8) infinite, spiderWalk 17s linear infinite;
 }
@@ -99,15 +99,15 @@ body {
 }
 
 #hero.idle-right {
-  background-image: url("https://drive.google.com/thumbnail?id=1LfRNG8pJK8F0lYtXH9tfGT70l4IW-66S&sz=w1000");
+  background-image: url("/images/sprite_back.png");
 }
 
 #hero.idle-left {
-  background-image: url("https://drive.google.com/thumbnail?id=1oxPBLaiwJR1QzOrLC4Z_dt5nFl56RzoN&sz=w1000");
+  background-image: url("/images/sprite_front.png");
 }
 
 #hero.running-right {
-  background-image: url("https://drive.google.com/thumbnail?id=1tbtI6RBfVzPV8TbA-Ww44E5Dz5_Ek3m0&sz=w1000");
+  background-image: url("/images/running_back.png");
   animation: runRight 0.7s steps(6) infinite;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 #hero.running-left {
-  background-image: url("https://drive.google.com/thumbnail?id=1eIBkrLk1cMlnsLETX1sLeqOc0On0D2R2&sz=w1000");
+  background-image: url("/images/running_front.png");
   animation: runLeft 0.7s steps(6) infinite;
 }
 
@@ -243,7 +243,7 @@ body {
   width: 100px;
   height: 100%;
   animation: MoveUpDown 2s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
-  background: url("https://drive.google.com/thumbnail?id=1oaSfaQ9lH9kJ74WGJZOQzBFnBZL6JWXP&sz=w100") repeat-y;
+  background: url("/images/hammer.png") repeat-y;
   z-index: 0;
   bottom: 0;
 }
@@ -259,7 +259,7 @@ body {
   background-color: #bbb;
   border-radius: 50%;
   top: calc(50% + 300px);
-  background: url("https://drive.google.com/thumbnail?id=1Ilr8beBalsgBA-QcCSeBpisfhJwj5kUi&sz=w1000");
+  background: url("/images/saw.png");
   background-size: cover;
   z-index: 0;
 }
@@ -294,13 +294,13 @@ body {
 }
 
 .bush {
-  background: url("https://drive.google.com/thumbnail?id=1ECNZf1tZIfmNy_GZB0jghoDIDlTMl1Pf&sz=w1000");
+  background: url("/images/bush_1.png");
   background-position: top center;
   margin-top: -20px;
 }
 
 .monster {
-  background: url("https://drive.google.com/thumbnail?id=1UO-UFCQlbSN46NPyDLS8Bf6-WMfbz8lS&sz=w1000");
+  background: url("/images/bush_2.png");
   margin-top: -120px;
 }
 
@@ -313,7 +313,7 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-image: url("https://drive.google.com/thumbnail?id=1K16UgPDBTbXXAfocdgRWqftFMMG7SVkg&sz=w1000");
+  background-image: url("/images/bird.png");
   background-size: cover;
 }
 
@@ -409,7 +409,7 @@ body {
   left: 0;
   width: 100%;
   height: 40px;
-  background: url("https://drive.google.com/thumbnail?id=1Y6CL6Tk9y2uLa2qMXWgVKaEpo9GaZB71&sz=w1000") repeat-x;
+  background: url("/images/grass.png") repeat-x;
   background-size: auto 40px;
   display: block;
   z-index: 999;
@@ -432,7 +432,7 @@ body {
   top: calc(50% - 0px);
   left: 10000px;
   margin-left: -140px;
-  background-image: url("https://drive.google.com/thumbnail?id=1mXa7h5cIQorJ-8IJEf0wrCbLT2daz-2C&sz=w1000");
+  background-image: url("/images/house.png");
   background-size: cover;
   background-repeat: no-repeat;
   animation: lights 3s infinite;
