@@ -11,6 +11,8 @@ import Bushes from '@/components/Bushes';
 import Birds from '@/components/Birds';
 import Spider from '@/components/Spider';
 import ScoreBoard from '@/components/ScoreBoard';
+import Lives from '@/components/Lives';
+import HurtEffect from '@/components/HurtEffect';
 import BootstrapClient from '@/components/BootstrapClient';
 import useGameLogic from '@/hooks/useGameLogic';
 import Image from 'next/image';
@@ -23,6 +25,8 @@ export default function HomePage() {
     onStart,
     onRestart,
     positions,
+    lives,
+    isHurt,
   } = useGameLogic();
 
   return (
@@ -32,6 +36,7 @@ export default function HomePage() {
       <StartScreen onStart={onStart} />
       <WinScreen time={time} bestTime={bestTime} onRestart={onRestart} />
       <GameOverScreen onRestart={onRestart} />
+      <HurtEffect isActive={isHurt} />
 
       <div id="gameContainer">
         <div id="left-wall" className="obstacle" style={{ left: '-100px' }} />
@@ -70,6 +75,10 @@ export default function HomePage() {
       </div>
 
       <ScoreBoard time={time} bestTime={bestTime} />
+      <div className="lives-container" style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 100 }}>
+        <Lives lives={lives} />
+      </div>
+      
     </>
   );
 }

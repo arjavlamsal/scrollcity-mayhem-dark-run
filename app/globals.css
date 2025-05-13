@@ -550,3 +550,39 @@ body {
   }
 
 }
+
+/* Lives component styling */
+.lives-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lives {
+  display: flex;
+  gap: 5px;
+}
+
+.lives img {
+  width: 24px;
+  height: 24px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}

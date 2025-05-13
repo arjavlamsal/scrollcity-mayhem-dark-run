@@ -25,6 +25,8 @@ export default function useGameLogic() {
   const [status, setStatus] = useState<GameStatus>('start');
   const [heroClass, setHeroClass] = useState('idle-left');
   const [time, setTime] = useState('00:00');
+  const [lives, setLives] = useState(3);
+  const [isHurt, setIsHurt] = useState(false);
   const [best, setBest] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('bestTime') || '00:00';
@@ -74,10 +76,25 @@ export default function useGameLogic() {
 
   const onGameOver = useCallback(() => {
     if (status === 'running') {
-      setStatus('over');
-      stop();
+      if (lives > 1) {
+        // Reduce lives but continue game
+        setLives(lives - 1);
+        
+        // Show hurt effect - make sure it's reset first to handle consecutive hits
+        setIsHurt(false);
+        // Use requestAnimationFrame to ensure the state is updated before setting to true
+        requestAnimationFrame(() => {
+          setIsHurt(true);
+          // Use a slightly longer timeout to ensure animation completes
+          setTimeout(() => setIsHurt(false), 400);
+        });
+      } else {
+        // Game over when no lives left
+        setStatus('over');
+        stop();
+      }
     }
-  }, [status, stop]);
+  }, [status, stop, lives]);
 
   const onGameWin = useCallback(() => {
     if (status === 'running') {
@@ -147,6 +164,8 @@ export default function useGameLogic() {
   }, [start]);
   
   const onRestart = useCallback(() => {
+    // Reset lives and reload the window for a complete restart
+    setLives(3);
     window.location.reload();
   }, []);
 
@@ -254,6 +273,8 @@ export default function useGameLogic() {
     heroState: heroClass, 
     time, 
     bestTime: best, 
+    lives,
+    isHurt,
     onStart, 
     onRestart, 
     onJump,
