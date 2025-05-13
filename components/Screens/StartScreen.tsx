@@ -8,7 +8,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
       <div className="main-title row d-flex justify-content-center align-items-center">
         <div className="col-12">
           <div className="d-flex justify-content-center">
-            <h1>Scroll City: Mayhem</h1>
+            <h1>ScrollCity Mayhem: Dark Run</h1>
           </div>
         </div>
         <div className="col-12">
